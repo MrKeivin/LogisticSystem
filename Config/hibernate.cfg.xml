@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuracoes de conexão do MySQL-->
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.username">root</property> 
+        <property name="hibernate.connection.password"></property> 
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:8081/LogisticSystem </property> 
+
+        
+        <!-- Configuracoes do Hibernate-->
+        <property name="hibernate.current_session_context_class">org.hibernate.context.ThreadLocalSessionContext</property>
+        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+        <property name="hibernate.format_sql">true</property>
+        <property name="hibernate.show-sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.jdbc.batch_size">50</property>
+        <property name="hibernate.validator.apply_to_ddl">false</property>
+        <property name="hibernate.validator.autoregister_listeners">false</property>
+
+        <!-- Entidades JPA mapeadas -->
+        <mapping class="br.com.padaria.entity.Fornecedor"/>
+        <mapping class="br.com.padaria.entity.Funcionario"/>
+        <mapping class="br.com.padaria.entity.Produto"/>
+
+    </session-factory>
+</hibernate-configuration>
