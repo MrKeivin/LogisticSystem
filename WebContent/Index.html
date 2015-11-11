@@ -3,11 +3,31 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Sistema de Logistica</title>
+
+<style type="text/css">
+        * { margin: 0; padding: 0; background-color: #ffffff; font-size:9pt;}
+        #divCenter { 
+                
+                width: 100px; 
+                height: 100px; 
+                left: 50%; 
+                margin: -200px 0 0 -190px; 
+                padding:10px;
+                position: absolute; 
+                top: 50%; }
+    </style>
+
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
  
 </head>
 <body>
+<div id="divCenter">
+
+<img src="http://payload.cargocollective.com/1/4/136163/2256222/abrange4.jpg" width="350" height="250">
+
  	<div class="container">
 	<div id="login-form">
+	
 	
     <h3>Login</h3>
 
@@ -15,13 +35,39 @@
 
       <form action="Login.jsp" method="get">
 			
-		Usuario:<input type="text" name="usuario">
-		Senha:<input type="password" name="senha">
+		
+			<div class="row">
+   			 	<div class="col-md-4"> 
+   			 		<div class="form-group">
+  						<input type="text" class="form-control" placeholder="usuario" name="usuario" aria-describedby="basic-addon1">
+  					</div> 
+  					<div class="form-group">
+								<input type="password" class="form-control" placeholder="senha" name="senha" aria-describedby="basic-addon1">
+					</div>
+  				</div>
+  				
+			</div>
+			
+			       
+  			<div class="btn-group" role="group" aria-label="...">
+  				
+  				<input type="submit" value="Login" class="btn btn-success">
+ 				
+			</div>	
+			
+			<div class="btn-group" role="group" aria-label="...">
+  				
+  				<input type="reset" value="Limpar" class="btn btn-success">
+ 				<footer class="clearfix">
+			</div>		
+  		</div>			
+		</div>	
+			
+		</div>	
+			
         
-
-        <input type="submit" value="Login">
-		<input type="reset" value="Limpar">
-        <footer class="clearfix">
+		
+        
 
         </footer>
 
@@ -31,7 +77,7 @@
 
   </div> 
 
-</div>
+
 
 
 </body>
