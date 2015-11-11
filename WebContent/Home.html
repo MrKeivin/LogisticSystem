@@ -3,138 +3,57 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" charset="utf-8">
 <title>Sistema de Logistica</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-  <link rel="stylesheet" href="/resources/demos/style.css">
-  <script>
+
+<style type="text/css">
+        * { margin: 0; padding: 0; background-color: #ffffff; font-size:11pt;}
+        #divCenter { 
+                
+                width: 100px; 
+                height: 100px; 
+                left: 50%; 
+                margin: -100px 0 0 -50px; 
+                padding:10px;
+                position: absolute; 
+                top: 50%; }
+    </style>
+
   
-  $(function() {
-    $( "#tabs" ).tabs({
-      event: "mouseover"
-    });
-  });
-  
-  $(function() {
-    $( "#menu" ).menu();
-  });
-  </script>
-  <style>
-  .ui-menu { width: 200px; }
-  
-  .ui-autocomplete-category {
-    font-weight: bold;
-    padding: .2em .4em;
-    margin: .8em 0 .2em;
-    line-height: 1.5;
-  </style>
-  
-   <script>
-  $.widget( "custom.catcomplete", $.ui.autocomplete, {
-    _create: function() {
-      this._super();
-      this.widget().menu( "option", "items", "> :not(.ui-autocomplete-category)" );
-    },
-    _renderMenu: function( ul, items ) {
-      var that = this,
-        currentCategory = "";
-      $.each( items, function( index, item ) {
-        var li;
-        if ( item.category != currentCategory ) {
-          ul.append( "<li class='ui-autocomplete-category'>" + item.category + "</li>" );
-          currentCategory = item.category;
-        }
-        li = that._renderItemData( ul, item );
-        if ( item.category ) {
-          li.attr( "aria-label", item.category + " : " + item.label );
-        }
-      });
-    }
-  });
-  </script>
-  <script>
-  $(function() {
-    var data = [
-      { label: "anders", category: "" },
-      { label: "andreas", category: "" },
-      { label: "antal", category: "" },
-      { label: "annhhx10", category: "Products" },
-      { label: "annk K12", category: "Products" },
-      { label: "annttop C13", category: "Products" },
-      { label: "anders andersson", category: "People" },
-      { label: "andreas andersson", category: "People" },
-      { label: "andreas johnson", category: "People" }
-    ];
+
  
-    $( "#search" ).catcomplete({
-      delay: 0,
-      source: data
-    });
-  });
-  </script>
+ <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   
 </head>
 
 <body>
-
-<div id="tabs">
-  <ul>
-    <li><a href="#tabs-1">Sobre</a></li>
-    <li><a href="#tabs-2">Funcoes</a></li>
-    <li><a href="#tabs-3">Pesquisa</a></li>
-  </ul>
-  <div id="tabs-1">
-    <p> Ciencia da Computacao - 6 Semetre. Trabalho WEB - Luciano Calderone.</p>
-    <p> Membros: Keivin, Bruno, Vitor. </p>
-    
-  </div>
-  <div id="tabs-2">
-    <ul id="menu">
-       
-  <li class="ui-state-disabled">Sistema Logistica</li>
-  <li>Menu Funcionario
-  
-  
-  	<ul>
-  		<li class="Funcionario">Funcionario</li>
-  		<li>Criar</li>
-  		<li>Alterar</li>
-  		<li>Excluir</li>
-  		<li>Consultar</li>
-  	</ul>
-  </li>
-  <li>Menu Fornecedor
-    <ul>
-      <li class="Fornecedor">Fornecedor</li>
-      	<li>Criar</li>
-  		<li>Alterar</li>
-  		<li>Excluir</li>
-  		<li>Consultar</li>
-    </ul>
-  </li>
-  
-  
-   <li>Menu Item
-    <ul>
-      <li class="Produto">Item</li>
-      	<li>Criar</li>
-  		<li>Alterar</li>
-  		<li>Excluir</li>
-  		<li>Consultar</li>
-    </ul>
-  </li>
- </ul> 
-  </div>
-  <div id="tabs-3">
-    
-    <label for="search">Search: </label>
-<input id="search">
-    
-    
-  </div>
-</div>
-
-
+	<div class="row">
+   			 	<div class="col-md-12">
+		<ul class="nav nav-tabs">
+  			<li role="presentation"><a class="btn btn-success" href="#">Home</a></li>
+  			<li class="dropdown">
+    			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
+    	<ul class="dropdown-menu">
+      		
+            <li><a href="#">Funcionario</a></li>
+            <li><a href="#">Fornecedor</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Item</a></li>
+    	</ul>
+  		</li>
+  			<li role="presentation"><a  href="#">Movimentacao</a></li>
+  			<li role="presentation"><a  href="#">Sobre</a></li>
+  			
+  			<div class="col-md-8">
+  			 <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control">
+        </div>
+        	<button type="submit" class="btn btn-default">Pesquisar</button>
+      	</form>
+  			
+  			
+		</ul>
+		</div>
+		</div>
 
 
 </body>
