@@ -21,8 +21,8 @@
  			
  			//out.println("Senha Correta");
  		}else{
- 			out.println("Senha Incorreta");
- 			//response.sendRedirect("http://localhost:8081/LogisticSystem/Login.html");
+ 			//out.println("Senha Incorreta");
+ 			response.sendRedirect("http://localhost:8081/LogisticSystem/LoginErro.html");
  		}
 
 

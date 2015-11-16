@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" charset="utf-8">
+
 <title>Sistema de Logistica</title>
 
-<style type="text/css">
+<!-- Editar formato da pagina "Home" -->
+ 	<style type="text/css">
         * { margin: 0; padding: 0; background-color: #ffffff; font-size:11pt;}
         #divCenter { 
                 
@@ -15,44 +17,129 @@
                 padding:10px;
                 position: absolute; 
                 top: 50%; }
-    </style>
+   </style> 
 
-  
-
- 
- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<!-- Links para importar formato bootstrap --> 
+<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="js/script.js" ></script>
   
 </head>
 
 <body>
-	<div class="row">
-   			 	<div class="col-md-12">
-		<ul class="nav nav-tabs">
-  			<li role="presentation"><a class="btn btn-success" href="#">Home</a></li>
-  			<li class="dropdown">
-    			<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
-    	<ul class="dropdown-menu">
-      		
-            <li><a href="#">Funcionario</a></li>
-            <li><a href="#">Fornecedor</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Item</a></li>
-    	</ul>
-  		</li>
-  			<li role="presentation"><a  href="#">Movimentacao</a></li>
-  			<li role="presentation"><a  href="#">Sobre</a></li>
-  			
-  			<div class="col-md-8">
-  			 <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control">
-        </div>
-        	<button type="submit" class="btn btn-default">Pesquisar</button>
-      	</form>
-  			
-  			
-		</ul>
+	
+<!--  <div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					 
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						 <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+					</button> <a class="navbar-brand" href="#">Sistema Logistica</a>
+				</div>
+				
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#">Link</a>
+						</li>
+						<li class="dropdown">
+							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastros<strong class="caret"></strong></a>
+							<ul class="dropdown-menu">
+								<li>
+									<a href="#">Gerenciar Clientes</a>
+								</li>
+								<li>
+									<a href="#">Matéria Prima</a>
+								</li>
+								<li>
+									<a href="#">Produtos Finais</a>
+								</li>
+								<li>
+									<a href="#">Perdas</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				
+			</nav>
 		</div>
+	</div>-->
+
+
+	<div class="row">
+   		<div class="col-md-12">
+			<ul class="nav nav-tabs">
+	  			<li role="presentation"><a class="btn btn-success" href="Home.html">Home</a></li>
+		 			
+	 	 		<li class="dropdown">
+		   			<a data-target="#" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		   				Configuracao
+		   				<span class="caret"></span></a>
+		   			
+			    	<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+			      		
+			            <li>
+			            	<a href="ControleFuncionario.html">Funcionario</a>
+			            </li>
+			            <li>
+			            	<a href="ControleFornecedor.html">Fornecedor</a>
+			            </li>
+			            <li role="separator" class="divider"></li>
+			            <li>
+			            	<a href="#">Item</a>
+			            </li>
+			    	</ul>
+			  	</li>
+			  	
+			  	 	
+			  	
+			  			<li role="presentation"><a  href="#">Listar</a></li>
+			  			<li role="presentation"><a  href="#">Download</a></li>
+			  			
+			  			<ul class="nav navbar-nav navbar-right">
+			  			<div class="col-md-12">
+				  			<form class="navbar-form navbar-left" role="search">
+							        <div class="form-group">
+							          <input type="text" class="form-control">
+							        </div>
+							        	<button type="submit" class="btn btn-default">Pesquisar</button>
+						    </form>
+	  			
+	  			
+			</ul>
+			</ul>
+		</div>
+	</div>
+	
+
+		<div class="jumbotron">
+		<div class="container">
+		
+  			<h1>Sobre!</h1>
+			
+			<p>Ciencia da Computacao - Programacao visual sistemas WEB</p>
+			<p>Professor: Luciano Calderone</p>
+		
+			<div id="spoiler" style="display:none">
+			
+			<p>Grupo:</p>
+		
+			<p>Keivin Fontanella Setei		RA:11309591</p>
+			<p>Vitor Carretero				RA:11310000</p>
+			<p>Bruno ALberto Silva			RA:11309601</p>
+		
+			<p>Nosso trabalho e sobre um sistema simples de logistica, podendo realizar cadastros, alterar produtos, excluir produtos e listar qualquer produto cadastrado.</p>
+			
+			</div>  <p><button class="btn btn-success btn-lg" href="#" role="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Leia mais</button></p>
+			
+			
+						
+			</div>
 		</div>
 
 
