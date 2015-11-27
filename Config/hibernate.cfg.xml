@@ -21,9 +21,10 @@
         <property name="hibernate.validator.autoregister_listeners">false</property>
 
         <!-- Entidades JPA mapeadas -->
-        <mapping class="br.com.padaria.entity.Fornecedor"/>
-        <mapping class="br.com.padaria.entity.Funcionario"/>
-        <mapping class="br.com.padaria.entity.Produto"/>
+        <mapping class="br.com.logistica.entidades.Fornecedor"/>
+        <mapping class="br.com.logistica.entidades.Funcionario"/>
+        <mapping class="br.com.logistica.entidades.CadastroFuncionario"/>
+        <mapping class="br.com.logistica.entidades.Produto"/>
 
     </session-factory>
 </hibernate-configuration>
