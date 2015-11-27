@@ -4,7 +4,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 /**import java.util.List;
-*
+
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -19,6 +19,7 @@ public class Funcionario {
 	private String nome;
 	private String setor;
 	private String cargo;
+	private String senha;
 	
 	/**
 	 * 
@@ -59,6 +60,14 @@ public class Funcionario {
 
 	public void setCargo(String cargo) {
 		this.cargo = cargo;
+	}
+
+	public String getSenha() {
+		return senha;
+	}
+
+	public void setSenha(String senha) {
+		this.senha = senha;
 	}
 
 }
