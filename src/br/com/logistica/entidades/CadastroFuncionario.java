@@ -24,7 +24,7 @@ public class CadastroFuncionario extends HttpServlet {
         String p = request.getParameter("fsenha");
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://3306/tdw", "root", "");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost/tdw", "root", "");
             PreparedStatement stmt = con.prepareStatement("insert into userlogin values(?,?,?,?,?)");
             stmt.setString(1, m);
             stmt.setString(2, n);
